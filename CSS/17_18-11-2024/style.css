@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+div,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --blue: #1b70df;
+  --orange: #f45d01;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #808080;
+  --lightgray: #c9c9c9;
+  --space: 5px;
+  --space-1: 10px;
+  --space-2: 20px;
+  --space-3: 30px;
+  --space-4: 40px;
+  --space-5: 50px;
+  --space-6: 60px;
+  --fs-1: calc(3vw + 1.5rem);
+  --fs-2: calc(2vw + 1.5rem);
+  --fs-3: calc(1vw + 1.5rem);
+}
+
+.container {
+  margin: auto;
+  padding: 0 var(--space-1);
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 760px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+
+.topbar {
+  background-color: var(--orange);
+}
+.topbar .topbar-nav {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-2) 0;
+}
+@media (max-width: 576px) {
+  .topbar .topbar-nav {
+    justify-content: center;
+  }
+}
+@media (min-width: 576px) {
+  .topbar .topbar-nav {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .topbar .topbar-nav {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 576px) {
+  .topbar .topbar-nav .contact {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .topbar .topbar-nav .contact {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .topbar .topbar-nav .contact {
+    display: block;
+  }
+}
+.topbar .topbar-nav .contact ul {
+  display: flex;
+  gap: var(--space-2);
+}
+.topbar .topbar-nav .contact ul li {
+  color: var(--white);
+}
+.topbar .topbar-nav .contact ul li i {
+  margin-right: var(--space);
+}
+.topbar .topbar-nav .social {
+  display: flex;
+  gap: var(--space-2);
+}
+.topbar .topbar-nav .social a {
+  color: var(--white);
+  transition: 0.5s ease;
+}
+.topbar .topbar-nav .social a:hover {
+  color: var(--lightgray);
+}/*# sourceMappingURL=style.css.map */
