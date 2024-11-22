@@ -21,6 +21,11 @@ button {
   font-size: 17px;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 ul {
   list-style-type: none;
 }
@@ -35,6 +40,7 @@ a {
   border: 2px solid transparent;
   border-radius: 40px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 :root {
@@ -224,7 +230,7 @@ header nav .menubtn .menu:active {
   scale: 0.9;
 }
 
-.herosection {
+.herosection .heroimg {
   background-image: url(https://p.w3layouts.com/demos_new/template_demo/20-03-2021/cleanfreshly-liberty-demo_Free/1414300734/web/assets/images/banner1.jpg);
   background-position: center;
   background-size: cover;
@@ -233,57 +239,218 @@ header nav .menubtn .menu:active {
   padding: 150px 0;
 }
 @media (max-width: 576px) {
-  .herosection {
+  .herosection .heroimg {
     padding: 50px 0;
   }
 }
 @media (min-width: 576px) {
-  .herosection {
+  .herosection .heroimg {
     padding: 70px 0;
   }
 }
 @media (min-width: 992px) {
-  .herosection {
+  .herosection .heroimg {
     padding: 150px 0;
   }
 }
-.herosection .herotext {
+.herosection .heroimg .herotext {
   width: 800px;
   padding: var(--space-2);
 }
 @media (max-width: 576px) {
-  .herosection .herotext {
+  .herosection .heroimg .herotext {
     width: 100%;
   }
 }
 @media (min-width: 576px) {
-  .herosection .herotext {
+  .herosection .heroimg .herotext {
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  .herosection .herotext {
+  .herosection .heroimg .herotext {
     width: 800px;
   }
 }
-.herosection .herotext p {
+.herosection .heroimg .herotext p {
   color: var(--orange);
   padding-bottom: var(--space);
 }
-.herosection .herotext h1 {
+.herosection .heroimg .herotext h1 {
   color: var(--white);
   font-size: var(--fs-2);
   padding: var(--space-2) 0;
   line-height: 1.5;
   text-transform: capitalize;
 }
-.herosection .herotext .btntrans {
+.herosection .heroimg .herotext .btntrans {
   background-color: transparent;
   color: var(--white);
   border-color: var(--white);
   transition: 0.5s ease;
 }
-.herosection .herotext .btntrans:hover {
+.herosection .heroimg .herotext .btntrans:hover {
   background-color: var(--white);
   color: var(--black);
+}
+.herosection .textinformation {
+  position: relative;
+  top: -60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: var(--space-6);
+}
+@media (max-width: 576px) {
+  .herosection .textinformation {
+    grid-template-columns: repeat(1, 1fr);
+    position: unset;
+  }
+}
+@media (min-width: 576px) {
+  .herosection .textinformation {
+    grid-template-columns: repeat(1, 1fr);
+    position: unset;
+  }
+}
+@media (min-width: 768px) {
+  .herosection .textinformation {
+    grid-template-columns: repeat(2, 1fr);
+    position: unset;
+  }
+}
+@media (min-width: 992px) {
+  .herosection .textinformation {
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+  }
+}
+.herosection .textinformation .box {
+  padding: var(--space-5) var(--space-4);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 0 10px var(--lightgray);
+}
+.herosection .textinformation .box:hover {
+  background-color: var(--blue);
+}
+.herosection .textinformation .box:hover .icon {
+  background-color: var(--white);
+}
+.herosection .textinformation .box:hover .icon i {
+  color: var(--blue);
+}
+.herosection .textinformation .box:hover h2 {
+  color: var(--white);
+}
+.herosection .textinformation .box:hover p {
+  color: var(--white);
+}
+.herosection .textinformation .box .icon {
+  margin: auto;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  display: grid;
+  place-content: center;
+}
+.herosection .textinformation .box .icon i {
+  font-size: 30px;
+  color: var(--white);
+}
+.herosection .textinformation .box h2 {
+  padding: var(--space-1) 0;
+  text-align: center;
+  font-weight: 900;
+}
+.herosection .textinformation .box p {
+  text-align: center;
+  color: var(--gray);
+  line-height: 1.5;
+}
+.herosection .textinformation .box2 {
+  background-color: var(--blue);
+}
+.herosection .textinformation .box2 .icon {
+  background-color: var(--white);
+}
+.herosection .textinformation .box2 .icon i {
+  color: var(--blue);
+}
+.herosection .textinformation .box2 h2 {
+  color: var(--white);
+}
+.herosection .textinformation .box2 p {
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .herosection .textinformation .box3 {
+    grid-row: 2;
+    grid-column: 1/span 2;
+    width: 50%;
+    justify-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .herosection .textinformation .box3 {
+    grid-row: unset;
+    grid-column: unset;
+    width: unset;
+    justify-self: unset;
+  }
+}
+
+.aboutus .aboutcomp {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .aboutus .aboutcomp {
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) {
+  .aboutus .aboutcomp {
+    flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .aboutus .aboutcomp {
+    flex-direction: row;
+  }
+}
+.aboutus .aboutcomp .img {
+  flex: 1;
+}
+.aboutus .aboutcomp .img img {
+  border-radius: 5px;
+}
+.aboutus .aboutcomp .abouttext {
+  flex: 1;
+}
+.aboutus .aboutcomp .abouttext h4 {
+  color: var(--orange);
+  text-transform: uppercase;
+  padding-bottom: var(--space-1);
+}
+.aboutus .aboutcomp .abouttext h1 {
+  font-size: 35px;
+  padding-bottom: var(--space-1);
+}
+.aboutus .aboutcomp .abouttext p {
+  color: var(--gray);
+  padding: var(--space-1) 0;
+  line-height: 1.5;
+}
+.aboutus .aboutcomp .abouttext .setbtn {
+  padding-top: var(--space-2);
+}
+.aboutus .aboutcomp .abouttext .setbtn button {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.aboutus .aboutcomp .abouttext .setbtn button:hover {
+  background-color: var(--orange);
 }/*# sourceMappingURL=style.css.map */
