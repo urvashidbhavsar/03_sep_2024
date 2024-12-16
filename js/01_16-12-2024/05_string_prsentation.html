@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var amount = 100;
+
+        // before ES6
+        document.write("<p>You have a &#8377; "
+            + amount +
+            "</p>")
+
+        // after ES6
+        document.write(`
+            <p>
+                You have a &#8377; ${amount}
+            </p>`)
+    </script>
+</body>
+
+</html>
