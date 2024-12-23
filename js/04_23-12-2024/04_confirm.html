@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setConfirmation()">Confirm</button>
+    <script>
+        // function setConfirmation() {
+        //     var msg = confirm("Click on any button")
+        //     if (msg) {
+        //         alert("click on ok")
+        //     } else {
+        //         alert("click on cancel")
+        //     }
+        // }
+
+        var link = "https://i.sstatic.net/UGXeb.jpg", closelink;
+        function setConfirmation() {
+            var msg = confirm("are you sure want to open page")
+            if (msg) {
+                closelink = window.open(link, "_blank")
+            } else {
+                // if we write this line window self closed, when live server used.
+                // window.close()
+                closelink.window.close()
+            }
+        }
+    </script>
+</body>
+
+</html>

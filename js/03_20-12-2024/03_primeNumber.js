@@ -1,4 +1,4 @@
-let num = 2
+let num = 25
 let primeCheck = true
 
 if (num == 1) {
@@ -8,7 +8,6 @@ if (num == 1) {
         if (num % i === 0) {
             primeCheck = false
             break;
-
         }
     }
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="para"></p>
+    <p class="para"></p>
+    <p class="para"></p>
+
+    <h1></h1>
+    <h2></h2>
+    <div class="mydiv"></div>
+
+    <div class="parent">Parent
+        <div class="child">Child</div>
+    </div>
+    <script>
+        // this method select classes, tags
+        let p = document.querySelectorAll(".para")
+        for (let i = 0; i < p.length; i++) {
+            p[i].innerHTML = "class selected"
+        }
+
+        // group selector
+        let group = document.querySelectorAll("h1,h2,.mydiv")
+        for (let i = 0; i < group.length; i++) {
+            group[i].innerHTML = "group selected"
+            group[i].style.color = "red"
+        }
+
+        // combinators= decendent
+        let sel = document.querySelectorAll(".parent .child")
+        sel[0].style.color = "blue"
+    </script>
+</body>
+
+</html>
