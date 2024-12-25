@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            color: green;
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setCss()">Click</button>
+
+    <h1 class="title" id="id">Hello world</h1>
+
+    <script>
+        function setCss() {
+            let h1 = document.getElementById("id")
+            if (h1.className == "title") {
+                h1.className = "heading"
+            } else {
+                h1.className = "title"
+            }
+        }
+    </script>
+</body>
+
+</html>

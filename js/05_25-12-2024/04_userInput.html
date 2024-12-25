@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :focus-visible {
+            outline: none;
+        }
+
+        input {
+            border: 1px solid gray;
+        }
+
+        .err {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        Enter Name : <input type="text" name="" id="user" value="">
+        <button onclick="return userinput()">Submit</button>
+    </form>
+    <p>Your name is : <span id="res"></span></p>
+
+    <script>
+        function userinput() {
+            let input = document.getElementById("user");
+            if (input.value == "") {
+                // alert("Enter value")
+                input.classList.add("err")
+                input.focus()
+            } else {
+                document.getElementById("res").innerHTML = input.value
+                input.classList.remove("err")
+                input.value = ""
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

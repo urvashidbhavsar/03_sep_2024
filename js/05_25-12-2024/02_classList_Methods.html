@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mydiv {
+            width: 300px;
+            border: 3px dashed saddlebrown;
+            padding: 20px;
+        }
+
+        .mydiv1 {
+            width: 300px;
+            border: 3px dashed lightseagreen;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addvalue()">Add</button>
+    <button onclick="removevalue()">remove</button>
+    <button onclick="addremove()">toggle</button>
+    <button onclick="checkValue()">Check</button>
+
+    <hr>
+    <div class="div1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque reiciendis dolorem voluptatibus, inventore
+        consequuntur quos distinctio dolore. Quos, quod ducimus! Maxime reprehenderit illo doloribus deleniti amet eos
+        laudantium nihil ducimus.
+    </div>
+    <div class="div2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga reiciendis sit eligendi, amet doloribus eius
+        asperiores quo hic iure ipsa expedita tempore harum ut inventore necessitatibus ratione cum suscipit architecto!
+    </div>
+
+    <script>
+        function addvalue() {
+            let div = document.querySelector(".div1")
+            div.classList.add("mydiv")
+            // div.classList.add("mydiv", "newdiv")
+        }
+        function removevalue() {
+            let div = document.querySelector(".div1")
+            div.classList.remove("mydiv")
+        }
+        function addremove() {
+            let div = document.querySelector(".div2")
+            div.classList.toggle("mydiv1")
+        }
+        function checkValue() {
+            let div = document.querySelector(".div2")
+            if (div.classList.contains("mydiv1")) {
+                alert("exist")
+            } else {
+                alert("not exist")
+            }
+        }
+    </script>
+</body>
+
+</html>

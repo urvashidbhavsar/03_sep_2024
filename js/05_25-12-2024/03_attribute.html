@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myimg {
+            border: 10px groove red;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="setAttr()">Set</button>
+    <button onclick="getAttr()">Get</button>
+    <button onclick="removeAttr()">Remove</button>
+    <hr>
+
+    <img src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?cs=srgb&dl=pexels-thatguycraig000-1563356.jpg&fm=jpg"
+        alt="" width="600px">
+
+    <script>
+        function setAttr() {
+            let img = document.querySelector("img")
+            // img.setAttribute("width", "400px")
+            // img.setAttribute("style", "border:10px groove red")
+            img.setAttribute("class", "myimg")
+        }
+
+        function removeAttr() {
+            let img = document.querySelector("img")
+            img.removeAttribute("class")
+        }
+        function getAttr() {
+            let img = document.querySelector("img")
+            alert(img.getAttribute("src"))
+        }
+    </script>
+</body>
+
+</html>
