@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="createNewElement()">Click</button>
+    <div class="list">
+        <p>first list</p>
+    </div>
+
+    <script>
+        // function createNewElement() {
+        //     let newlist = document.querySelector(".list")
+        //     newlist.innerHTML += `<p> New List </p>`
+        // }
+
+        function createNewElement() {
+            let newlist = document.querySelector(".list")
+
+            let p = document.createElement("p")
+            let text = document.createTextNode("New List");
+            p.appendChild(text)
+            newlist.appendChild(p)
+        }
+    </script>
+</body>
+
+</html>
