@@ -1,0 +1,32 @@
+console.log(Math.abs(-15));
+console.log(Math.acos(1));
+console.log(Math.acosh(2));
+console.log(Math.asin(1));
+console.log(Math.asinh(1));
+console.log(Math.atan(1));
+console.log(Math.atan2(2, 1));
+console.log(Math.atanh(1));
+console.log(Math.cbrt(27));
+// display largest number
+console.log(Math.ceil(10.33));
+console.log(Math.cos(1));
+console.log(Math.cosh(1));
+console.log(Math.exp(1));
+// display smallest number
+console.log(Math.floor(10.33));
+console.log(Math.fround(12.222));
+console.log(Math.hypot(2, 3));
+console.log(Math.imul(2, 2));
+console.log(Math.log(2));
+console.log(Math.max(3, 6, 8, 2, 9));
+console.log(Math.min(3, 6, 8, 2, 9));
+console.log(Math.pow(2, 3));
+console.log(Math.random());
+console.log(Math.round(12.55));
+console.log(Math.sign(-4));
+console.log(Math.sin(1));
+console.log(Math.sinh(1));
+console.log(Math.sqrt(9));
+console.log(Math.tan(1));
+console.log(Math.tanh(1));
+console.log(Math.trunc(3.22));
