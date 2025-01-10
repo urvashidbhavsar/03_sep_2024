@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" id="user" placeholder="Enter name" onkeyup="return checknameptn()" oninput="allow()">
+        <span id="msg"></span>
+        <br><br>
+
+        <button onclick="return checkname()">Check</button>
+    </form>
+
+    <script>
+        function checkname() {
+            let uname = document.getElementById("user")
+            if (uname.value == "") {
+                document.getElementById("msg").innerHTML = "Enter name"
+            }
+            return false;
+        }
+
+        function checknameptn() {
+            let uname = document.getElementById("user")
+            let ptn = /^[A-Za-z\s]*$/
+            if (!ptn.test(uname.value)) {
+                document.getElementById("msg").innerHTML = "Invalid value!!!"
+            } else if (uname.value.length < 6) {
+                document.getElementById("msg").innerHTML = "Required 6 character"
+            } else {
+                document.getElementById("msg").innerHTML = null
+            }
+            return false
+        }
+
+        function allow() {
+            let uname = document.getElementById("user")
+            uname.value = uname.value.replace(/[\d\W]/, '')
+        }
+    </script>
+</body>
+
+</html>
