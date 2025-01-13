@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" id="mobileno" placeholder="Enter Mobile no" onkeyup="return setMobileNo()" minlength="10"
+            maxlength="10" oninput="allow(),startallow()">
+
+        <span id="msg"></span>
+        <br><br>
+
+        <button>Submit</button>
+    </form>
+
+    <script>
+        function setMobileNo() {
+            let no = document.getElementById("mobileno")
+            let ptn = /^[0-9]*$/
+            if (!ptn.test(no.value)) {
+                document.getElementById("msg").innerHTML = "Enter Valid Number"
+            } else if (no.value.length < 10) {
+                document.getElementById("msg").innerHTML = "Enter 10 Digits"
+            } else {
+                document.getElementById("msg").innerHTML = null
+            }
+            return false
+        }
+
+        function allow() {
+            let no = document.getElementById("mobileno")
+            no.value = no.value.replace(/[\D]/, '')
+        }
+        function startallow() {
+            let no = document.getElementById("mobileno")
+            no.value = no.value.replace(/^[0-5]/, '')
+        }
+    </script>
+</body>
+
+</html>

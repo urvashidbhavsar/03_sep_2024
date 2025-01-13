@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <input type="text" id="email" placeholder="Enter Email" onkeyup="return checkEmail()">
+
+        <span id="msg"></span>
+        <br><br>
+
+        <button>Submit</button>
+    </form>
+
+    <script>
+        function checkEmail() {
+            let mail = document.getElementById("email")
+            let ptn = /^[a-z][a-z0-9\._]*@[a-z]*(\.[a-z]{2,3})+$/;
+            // let ptn = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            if (ptn.test(mail.value)) {
+                document.getElementById("msg").innerHTML = null
+            } else {
+                document.getElementById("msg").innerHTML = "Enter valid email id"
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
