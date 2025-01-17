@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 5px;
+        }
+
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <input type="text" id="fname" placeholder="Firstname" onblur="return checkBlankField('fname','msg1')"
+                onkeyup="return checkinputptn('fname', 'msg1')">
+            <span id="msg1"></span>
+        </div>
+
+        <div>
+            <input type="text" id="mname" placeholder="Middlename" onblur="return checkBlankField('mname','msg2')"
+                onkeyup="return checkinputptn('mname', 'msg2')">
+            <span id="msg2"></span>
+        </div>
+
+        <div>
+            <input type="text" id="lname" placeholder="Lastname" onblur="return checkBlankField('lname','msg3')"
+                onkeyup="return checkinputptn('lname', 'msg3')">
+            <span id="msg3"></span>
+        </div>
+    </form>
+
+    <script>
+        function checkBlankField(input, msg) {
+            let inp = document.getElementById(input)
+            if (inp.value == "" || inp.value == null) {
+                document.getElementById(msg).innerHTML = "Enter value"
+            }
+            return false
+        }
+
+        function checkinputptn(input, res) {
+            let ptn = /^[A-Za-z]*$/
+            let inp = document.getElementById(input)
+            if (ptn.test(inp.value)) {
+                document.getElementById(res).innerHTML = null
+            } else {
+                document.getElementById(res).innerHTML = "Invalid input"
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>

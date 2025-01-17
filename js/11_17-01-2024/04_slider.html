@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            height: 600px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider-page {
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+        }
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border: none;
+            top: 250px;
+        }
+
+        button {
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            background-color: black;
+            color: white;
+            font-size: 40px;
+            margin: 10px;
+            border: none;
+        }
+
+        button:active {
+            scale: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-page">
+        <div class="slide">
+            <img src="https://marketplace.canva.com/EAGDYZWPJyc/1/0/1600w/canva-green-and-yellow-simple-nature-lake-desktop-wallpaper-oO_xIwyw0KM.jpg"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://i0.wp.com/imaginewithrashid.com/wp-content/uploads/2024/07/rashidckk_aesthetic_desktop_wallpaper_of_a_minimalist_landsca_b5cccbba-9bdd-4556-a96d-68e66013f863_3.webp?resize=1024%2C574&ssl=1"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://marketplace.canva.com/EAGDMVLSqu8/1/0/1600w/canva-green-nature-aesthetic-quotes-desktop-wallpaper-zd64ZbHmEDc.jpg"
+                alt="">
+        </div>
+        <div class="slide">
+            <img src="https://plus.unsplash.com/premium_photo-1697730150275-dba1cfe8af9c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWVzdGhldGljJTIwZGVza3RvcCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D"
+                alt="">
+        </div>
+
+        <div class="controls">
+            <button onclick="changeSlide(-1)">&lt;</button>
+            <button onclick="changeSlide(1)">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        let index = 0;
+        slideshow(index);
+
+        function changeSlide(x) {
+            slideshow(index += x)
+        }
+
+        function slideshow(noofslide) {
+            let slide = document.getElementsByClassName("slide")
+
+            if (noofslide < 0) {
+                noofslide = slide.length - 1
+                index = slide.length - 1
+            }
+            if (noofslide == slide.length) {
+                noofslide = 0
+                index = 0
+            }
+
+            for (let s of slide) {
+                s.style.display = "none"
+            }
+            slide[index].style.display = "block"
+        }
+    </script>
+</body>
+
+</html>

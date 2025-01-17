@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        Gender :
+        <input type="radio" name="gen" id="male"> Male
+        <input type="radio" name="gen" id="female"> Female
+        <span id="msg1"></span>
+        <hr>
+
+        city :
+        <select name="" id="city">
+            <option value="-1">---select---</option>
+            <option value="">Surat</option>
+        </select>
+        <span id="msg2"></span>
+        <hr>
+        <button onclick="return validate()">click</button>
+    </form>
+
+    <script>
+        function validate() {
+            let m = document.getElementById("male").checked
+            let f = document.getElementById("female").checked
+            let city = document.getElementById("city").value;
+            if (m == false && f == false) {
+                document.getElementById("msg1").innerHTML = "Select Value"
+            } else if (city === "-1") {
+                document.getElementById("msg2").innerHTML = "Select City"
+            } else {
+                document.getElementById("msg1").innerHTML = null
+                document.getElementById("msg2").innerHTML = null
+            }
+            return false
+        }
+    </script>
+</body>
+
+</html>
