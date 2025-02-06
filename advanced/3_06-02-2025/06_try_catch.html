@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // try {
+        //     const x = 10
+        //     x = 12
+        //     console.log(x);
+        // } catch (e) {
+        //     throw new Error("You cant changed value of constant")
+        //     // console.log(e);
+        // }
+
+        // try {
+        //     // y = 10;
+        //     console.log(y);
+        // } catch (e) {
+        //     throw new Error("Value not define")
+        //     // console.log(e);
+        // }
+
+        try {
+            const numberdisplay = (start, end) => {
+                if (end === start) return;
+                console.log(start);
+                numberdisplay(start - 1, end)
+            }
+            numberdisplay(30, 21)
+        } catch (e) {
+            throw new Error("Out of Range");
+        } finally {
+            console.log("End of program");
+        }
+    </script>
+</body>
+
+</html>

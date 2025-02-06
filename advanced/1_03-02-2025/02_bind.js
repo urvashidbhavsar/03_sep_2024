@@ -3,9 +3,9 @@ const person1 = {
     lastname: "Patel"
 }
 const fulldata = {
-    fullname: function (firstname, lastname) {
+    fullname: function () {
         return this.firstname + " " + this.lastname
-    }
+    },
 }
 const newdata = fulldata.fullname.bind(person1)
 console.log(newdata());
