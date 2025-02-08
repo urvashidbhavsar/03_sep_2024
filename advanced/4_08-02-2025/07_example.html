@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="data"></div>
+
+    <script>
+        let d = document.getElementById("data")
+        let ename = ["Abc", "Xyz", "Mno", "Pqr", "Uvw"]
+        let task = ename.map(items => (
+            `<div>Hello : ${items}</div>`
+        ))
+        d.innerHTML = task
+    </script>
+</body>
+
+</html>
