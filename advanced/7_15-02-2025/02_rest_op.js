@@ -1,0 +1,4 @@
+function add(...num) {
+    return num
+}
+console.log(add(3, 4, 5, 2, 3, 4, 4, 3));

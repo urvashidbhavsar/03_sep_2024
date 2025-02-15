@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setdata()">Set Item</button>
+    <button onclick="getdata()">Get Items</button>
+    <button onclick="datalength()">Length</button>
+    <button onclick="getkey()">Key</button>
+    <button onclick="removedata()">Remove Items</button>
+    <button onclick="reset()">Clear</button>
+
+    <p id="p1"></p>
+    <script>
+        function setdata() {
+            localStorage.setItem("new products", "My Products")
+        }
+        function getdata() {
+            var data = localStorage.getItem("1")
+            document.getElementById("p1").innerHTML = data
+        }
+        function datalength() {
+            var data = localStorage.length
+            document.getElementById("p1").innerHTML = data
+        }
+        function getkey() {
+            var data = localStorage.key(0)
+            document.getElementById("p1").innerHTML = data
+        }
+        function removedata() {
+            localStorage.removeItem("1")
+        }
+        function reset() {
+            localStorage.clear()
+        }
+    </script>
+</body>
+
+</html>
