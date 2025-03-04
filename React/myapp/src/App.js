@@ -10,6 +10,10 @@ import Display from './Display';
 import Navbar from './components/Navbar/Navbar';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer/Footer';
+import Myimage from './components/DisplayImage/Myimage';
+import Example1 from './components/props/Example1';
+import Example2 from './components/props/dividepoints/Example2';
+import Imagegallery from './components/props/Imagegallery';
 
 function App() {
   return (
@@ -23,9 +27,13 @@ function App() {
       {/* <Modulefile /> */}
       {/* <Var /> */}
       {/* <Classcompex /> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <Homepage />
-      <Footer />
+      {/* <Footer /> */}
+      {/* <Myimage /> */}
+      {/* <Example1 /> */}
+      {/* <Example2 /> */}
+      <Imagegallery />
     </>
   );
 }
