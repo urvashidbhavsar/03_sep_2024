@@ -14,11 +14,12 @@ import Myimage from './components/DisplayImage/Myimage';
 import Example1 from './components/props/Example1';
 import Example2 from './components/props/dividepoints/Example2';
 import Imagegallery from './components/props/Imagegallery';
+import Usecomponent from './components/Materials/Usecomponent';
 
 function App() {
   return (
     <>
-      {/* <h1>Hello World</h1> */}
+      {/* <h1 className="text-primary bg-warning">Hello World</h1> */}
       {/* <Display /> */}
       {/* <Display></Display> */}
       {/* <Inline /> */}
@@ -28,12 +29,13 @@ function App() {
       {/* <Var /> */}
       {/* <Classcompex /> */}
       {/* <Navbar /> */}
-      <Homepage />
+      {/* <Homepage /> */}
       {/* <Footer /> */}
       {/* <Myimage /> */}
       {/* <Example1 /> */}
       {/* <Example2 /> */}
-      <Imagegallery />
+      {/* <Imagegallery /> */}
+      <Usecomponent />
     </>
   );
 }
