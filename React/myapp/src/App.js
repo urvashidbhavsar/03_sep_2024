@@ -15,6 +15,10 @@ import Example1 from './components/props/Example1';
 import Example2 from './components/props/dividepoints/Example2';
 import Imagegallery from './components/props/Imagegallery';
 import Usecomponent from './components/Materials/Usecomponent';
+import Iconuse from './components/Fontawesome/Iconuse';
+import Eventex1 from './components/Events/Eventex1';
+import Proptypeex from './components/propstypeex/Proptypeex';
+import StateEx from './components/Stateexample/StateEx';
 
 function App() {
   return (
@@ -35,7 +39,11 @@ function App() {
       {/* <Example1 /> */}
       {/* <Example2 /> */}
       {/* <Imagegallery /> */}
-      <Usecomponent />
+      {/* <Usecomponent /> */}
+      <Iconuse />
+      <Eventex1 />
+      <Proptypeex name="Abc" />
+      <StateEx />
     </>
   );
 }
