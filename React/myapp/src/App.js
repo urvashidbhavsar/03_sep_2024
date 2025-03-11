@@ -19,6 +19,12 @@ import Iconuse from './components/Fontawesome/Iconuse';
 import Eventex1 from './components/Events/Eventex1';
 import Proptypeex from './components/propstypeex/Proptypeex';
 import StateEx from './components/Stateexample/StateEx';
+import Ifstatement from './components/Conditional/Ifstatement';
+import Ifexample1 from './components/Conditional/Ifexample1';
+import List from './components/HigherFunctions/List';
+import Fiterdata from './components/HigherFunctions/Fiterdata';
+import EmployeeData from './components/HigherFunctions/EmployeeData';
+import Mygallery from './components/HigherFunctions/Mygallery';
 
 function App() {
   return (
@@ -40,10 +46,16 @@ function App() {
       {/* <Example2 /> */}
       {/* <Imagegallery /> */}
       {/* <Usecomponent /> */}
-      <Iconuse />
-      <Eventex1 />
-      <Proptypeex name="Abc" />
-      <StateEx />
+      {/* <Iconuse /> */}
+      {/* <Eventex1 /> */}
+      {/* <Proptypeex name="Abc" /> */}
+      {/* <StateEx /> */}
+      {/* <Ifstatement /> */}
+      {/* <Ifexample1 /> */}
+      {/* <List /> */}
+      {/* <Fiterdata /> */}
+      {/* <EmployeeData /> */}
+      <Mygallery />
     </>
   );
 }

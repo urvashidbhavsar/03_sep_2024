@@ -13,7 +13,8 @@ class StateEx extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleChange}>Click </button>
+                <hr />
+                <button onClick={this.handleChange} className='btn btn-info'>Click </button>
                 <p>{this.state.color}</p>
             </div>
         )
