@@ -4,24 +4,34 @@
 
 .bx-wrapper {
     border: 0;
+    margin-bottom: 0;
 }
 
 .slider1 {
-    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner1.jpg) center / cover;
-    height: 500px;
+    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner1.jpg) center / cover rgba(0, 0, 0, 0.7);
 }
 
 .slider2 {
-    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner2.jpg) center / cover;
-    height: 500px
+    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner2.jpg) center / cover rgba(0, 0, 0, 0.7);
 }
 
 .slider3 {
-    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner3.jpg) center / cover;
-    height: 500px;
+    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner3.jpg) center / cover rgba(0, 0, 0, 0.7);
 }
 
 .slider4 {
-    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner4.jpg) center / cover;
-    height: 500px;
+    background: url(https://p.w3layouts.com/demos_new/template_demo/22-05-2020/coffee-liberty-demo_Free/1675664344/web/assets/images/banner4.jpg) center / cover rgba(0, 0, 0, 0.7);
+}
+
+.slide {
+    padding: 150px 100px;
+    background-blend-mode: multiply;
+}
+
+.slide .title {
+    width: 700px;
+}
+
+.slide p {
+    width: 700px;
 }
