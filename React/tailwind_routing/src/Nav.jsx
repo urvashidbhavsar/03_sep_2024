@@ -12,7 +12,7 @@ const Nav = () => {
             <ul>
                 {
                     menu.map(items =>
-                        <li key={items.path}>
+                        <li key={items.path} className='text-red-500'>
                             <Link to={items.path}>{items.pathname}</Link>
                         </li>
                     )

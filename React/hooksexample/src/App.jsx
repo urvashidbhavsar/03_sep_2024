@@ -6,6 +6,9 @@ import Employee from './usestate/Employee'
 import SetTime from './useeffect/SetTime'
 import Apicall from './useeffect/Apicall'
 import Videoplay from './useref/Videoplay'
+import Component1 from './usecontext/Component1'
+import CompContext from './usecontext/CompContext'
+import Arithmetic from './usereducer/Arithmetic'
 
 const App = () => {
   return (
@@ -16,7 +19,10 @@ const App = () => {
       {/* <Employee /> */}
       {/* <SetTime /> */}
       {/* <Apicall /> */}
-      <Videoplay />
+      {/* <Videoplay /> */}
+      {/* <Component1 /> */}
+      {/* <CompContext /> */}
+      <Arithmetic />
     </>
   )
 }
