@@ -9,6 +9,9 @@ import Videoplay from './useref/Videoplay'
 import Component1 from './usecontext/Component1'
 import CompContext from './usecontext/CompContext'
 import Arithmetic from './usereducer/Arithmetic'
+import Example2 from './usememo/Example2'
+import Example3 from './callback/Example3'
+import Callapi from './custom_hook/callapi'
 
 const App = () => {
   return (
@@ -22,7 +25,10 @@ const App = () => {
       {/* <Videoplay /> */}
       {/* <Component1 /> */}
       {/* <CompContext /> */}
-      <Arithmetic />
+      {/* <Arithmetic /> */}
+      {/* <Example2 /> */}
+      {/* <Example3 /> */}
+      <Callapi />
     </>
   )
 }
