@@ -1,0 +1,32 @@
+{
+    "employee": [
+        {
+            "id": "1",
+            "empname": "Hetal Patel",
+            "salary": 30000,
+            "designation": "Manager",
+            "profile": "https://images.freeimages.com/fic/images/icons/2463/glossy/512/user_female.png"
+        },
+        {
+            "id": "2",
+            "empname": "Harsh Parmar",
+            "salary": 25000,
+            "designation": "Software Developer",
+            "profile": "https://images.freeimages.com/fic/images/icons/2463/glossy/512/user_male.png"
+        },
+        {
+            "id": "3",
+            "empname": "Mittal Raval",
+            "salary": 35000,
+            "designation": "Software Developer",
+            "profile": "https://images.freeimages.com/fic/images/icons/2463/glossy/512/user_female.png"
+        },
+        {
+            "id": "4",
+            "empname": "Ritesh Parekh",
+            "salary": "450000",
+            "designation": "CEO",
+            "profile": "https://images.freeimages.com/fic/images/icons/2463/glossy/512/user_male.png"
+        }
+    ]
+}
