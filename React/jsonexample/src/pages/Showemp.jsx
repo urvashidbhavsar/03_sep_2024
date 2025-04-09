@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons'
+import List from './List'
+import Updateemp from './Updateemp'
 
 const Showemp = () => {
     const [getdata, setGetdata] = useState([])
+    const [update, setUpdate] = useState("")
+
+    const editData = (items) => {
+        // setEdit(items)
+        setUpdate(items)
+    }
 
     const fetchapidata = async () => {
         await fetch("http://localhost:3000/employee", {
@@ -21,6 +31,15 @@ const Showemp = () => {
         fetchapidata()
     }, [])
 
+    const DeleteData = async (id) => {
+        if (confirm("Are you sure to want delete this data?")) {
+            await fetch(`http://localhost:3000/employee/${id}`, {
+                method: "DELETE",
+            })
+        }
+        fetchapidata()
+    }
+
     return (
         <>
             <div className="container">
@@ -33,6 +52,7 @@ const Showemp = () => {
                             <th>Designation</th>
                             <th>Salary</th>
                             <th>Profile</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,11 +66,21 @@ const Showemp = () => {
                                     <td>
                                         <img src={item.profile} style={img} />
                                     </td>
+                                    <td>
+                                        <button className='btn btn-info mx-1' data-bs-toggle="modal" data-bs-target="#updatemodal" onClick={() => editData(item)}>
+                                            <FontAwesomeIcon icon={faPen} />
+                                        </button>
+                                        <button className="btn btn-danger mx-1" onClick={() => DeleteData(item.id)}>
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
+                                    </td>
                                 </tr>
                             )
                         }
                     </tbody>
                 </table>
+
+                <Updateemp edit={update} setEdit={setUpdate} fetchdata={fetchapidata} />
             </div>
         </>
     )
