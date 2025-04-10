@@ -2,7 +2,7 @@ import React, { use, useState } from 'react'
 import Showemp from './Showemp'
 import List from './List'
 
-const Addemp = () => {
+const Addemp = ({ fetchdata }) => {
     const des = List()
 
     const [user, setUser] = useState({
@@ -34,6 +34,7 @@ const Addemp = () => {
                 designation: "",
                 profile: ""
             })
+            fetchdata()
         }
 
     }
@@ -74,11 +75,7 @@ const Addemp = () => {
                         </div>
                     </div>
                 </form>
-
             </div>
-
-
-            <Showemp />
         </>
     )
 }
