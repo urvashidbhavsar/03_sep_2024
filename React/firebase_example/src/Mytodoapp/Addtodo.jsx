@@ -14,6 +14,7 @@ const Addtodo = () => {
         if (todo != "") {
             await addDoc(collection(db, 'mytodos'), {
                 title: todo,
+                // completeTodo : completed,
             });
             alert("data added successfully!!!!")
             setTodo("")
